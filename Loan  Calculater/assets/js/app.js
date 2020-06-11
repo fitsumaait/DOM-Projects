@@ -30,8 +30,37 @@ function calculateLoan(e)
     }
     else
     {
-      console.log('Somthing wrong....');
+     displayErrorPopup();
     }
  
   e.preventDefault();
+}
+
+function displayErrorPopup()
+{
+  // Create an error div 
+  const errdiv = document.createElement('div');
+  // Class of error from bootstrap 
+  errdiv.className = 'alert alert-danger';
+// Append text node 
+errdiv.appendChild(document.createTextNode('Check you Numbers..'));
+
+// Lets grab the card and header 
+const card = document.querySelector('.card');
+const heading = document.querySelector('.header');
+
+card.insertBefore(errdiv,heading);
+
+// Clear after 3 sec 
+setTimeout(function(){
+  document.querySelector('.alert').remove();
+},3000);
+
+
+
+
+
+
+
+
 }
