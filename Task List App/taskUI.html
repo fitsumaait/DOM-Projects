@@ -16,9 +16,28 @@
        <div class="col s12">
            <div id="main" class="card">
                <div class="card-content">
-                   <span class="card-title">
-                       The Daily Task List 
-                   </span>
+                   <span class="card-title">The Daily Task List</span>
+                   <div class="row">
+                       <form id="task-form">
+                           <div class="input-field col s12">
+                               <input type="text" name="task" id="task">
+                               <label for="task">New Task</label>
+                           </div>
+                           <input type="submit" value="Add Task" class="btn">
+                       </form>
+
+                   </div>
+               </div>
+               <div class="card-action">
+                   <h5 id="task-title">Tasks</h5>
+                   <div class="input-field col s12">
+                    <input type="text" name="filter" id="filter">
+                    <label for="filter">Filter Tasks/label>
+                </div>
+                <ul class="collection">
+                    <!-- Here is the task list goes  -->
+                </ul>
+                <a href="#" class="clear-tasks btn black">Clear All Task</a>
                </div>
            </div>
        </div>
