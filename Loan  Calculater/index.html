@@ -8,16 +8,48 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Loan Calculator</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="bg-dark"> 
+ <div class="container">
+  <div class="row">
+  <div class="col-md6 mx-auto">
+<div class="card card-body text-center mt-5">
+   <h1 class="header display-5 pb-5">Loan Calculator</h1>
+   <form  id="form-sub">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="number"  class="form-control" id="amount" placeholder="The Loan Amount">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-text">%</span>
+            <input type="number"  class="form-control" id="interest" placeholder="The Loan Interest">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-text">y</span>
+            <input type="number"  class="form-control" id="year" placeholder="The Loan Repay Year">
+        </div>
+    </div>
+    <div class="form-group">
+            <input type="submit"  class="btn btn-secondary btn-block" id="calc" value="Calculate Loan">
+    </div>
+   </form>
+</div>
+  </div>
+
+
+  </div>
 
 
 
 
+ </div>
 
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
