@@ -16,6 +16,8 @@ function loadEventListeners()
     form.addEventListener('submit', addNewTask);
     // Remove task event [event delegation]
     taskList.addEventListener('click', removeTask);
+      // Clear All Tasks
+      clearBtn.addEventListener('click', clearAllTasks);
 }
 
 
@@ -55,6 +57,20 @@ if(e.target.parentElement.classList.contains('delete-item'))
    if(confirm('Are You Sure about that ?'))
     e.target.parentElement.parentElement.remove();
 }
+
+
+}
+
+// Clear Task Function defination 
+function clearAllTasks()
+{
+    // taskList.innerHTML = '';      This is the first way    
+   while(taskList.firstChild)
+   {
+      taskList.removeChild(taskList.firstChild);
+   }
+
+
 
 
 }
