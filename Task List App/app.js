@@ -83,6 +83,9 @@ function clearAllTasks()
       taskList.removeChild(taskList.firstChild);
    }
 
+//    Clear from DB [Local Storage]
+clearAllTasksfromDB();
+
 }
 
 // Filter tasks function defination 
@@ -177,4 +180,10 @@ function removefromDB(taskItem)
     });
     localStorage.setItem('tasks', JSON.stringify(listofTasks));
 
+}
+
+// Clear from Locla Storage 
+function clearAllTasksfromDB()
+{
+    localStorage.clear();
 }
