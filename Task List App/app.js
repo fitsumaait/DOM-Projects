@@ -44,7 +44,7 @@ li.appendChild(document.createTextNode(taskInput.value));
 const link = document.createElement('a');
 // Add clas and the x marker for a 
 link.className = 'delete-item secondary-content';
-link.innerHTML = '<i class="fa fa-remove"> </i>';
+link.innerHTML = '<i class="fa fa-remove"></i>';
 // Append link to li
 li.appendChild(link);
 // Append to UL 
@@ -61,8 +61,14 @@ function removeTask(e)
 {
 if(e.target.parentElement.classList.contains('delete-item'))
 {
-   if(confirm('Are You Sure about that ?'))
+   if(confirm('Are You Sure about that ?')){
     e.target.parentElement.parentElement.remove();
+
+    // Remove from DB [Local Storage ...]
+    removefromDB(e.target.parentElement.parentElement);
+
+   }
+   
 }
 
 
@@ -79,7 +85,7 @@ function clearAllTasks()
 
 }
 
-// Filte tasks function defination 
+// Filter tasks function defination 
 function filterTasks(e)
 {
 const text = e.target.value.toLowerCase();
@@ -115,7 +121,7 @@ function addToDatabase(newTask)
 
 }
 
-// Load task 
+// Load task from local storage function declaration 
 function loadTasksfromDB()
 {
     let listofTasks;
@@ -148,5 +154,27 @@ li.appendChild(link);
 taskList.appendChild(li);
     });
 
+
+}
+// Remove from Local storage function declaration 
+function removefromDB(taskItem)
+{
+
+    // console.log(taskItem.textContent);
+    let listofTasks;
+    if(localStorage.getItem('tasks') == null)
+    {
+        listofTasks = [];
+    }
+    else
+    {
+        listofTasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+    listofTasks.forEach(function(task,index)
+    {
+    if(taskItem.textContent === task)
+        listofTasks.splice(index,1);
+    });
+    localStorage.setItem('tasks', JSON.stringify(listofTasks));
 
 }
