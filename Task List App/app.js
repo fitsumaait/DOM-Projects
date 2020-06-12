@@ -12,6 +12,8 @@ loadEventListeners();
 
 function loadEventListeners()
 {
+    // DOM load event 
+    document.addEventListener('DOMContentLoaded', loadTasksfromDB);
 
     form.addEventListener('submit', addNewTask);
     // Remove task event [event delegation]
@@ -111,7 +113,40 @@ function addToDatabase(newTask)
     localStorage.setItem('tasks', JSON.stringify(listofTasks));
 
 
+}
 
+// Load task 
+function loadTasksfromDB()
+{
+    let listofTasks;
+    if(localStorage.getItem('tasks') == null)
+    {
+        listofTasks = [];
+    }
+    else
+    {
+        listofTasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    listofTasks.forEach(function(eachTask)
+    {
+
+// Create an li element when the user adds a task 
+const li = document.createElement('li');
+// Adding a class
+li.className = 'collection-item';
+// Create text node and append it 
+li.appendChild(document.createTextNode(eachTask));
+// Create new element for the link 
+const link = document.createElement('a');
+// Add clas and the x marker for a 
+link.className = 'delete-item secondary-content';
+link.innerHTML = '<i class="fa fa-remove"> </i>';
+// Append link to li
+li.appendChild(link);
+// Append to UL 
+taskList.appendChild(li);
+    });
 
 
 }
