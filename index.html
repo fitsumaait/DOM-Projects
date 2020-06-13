@@ -1,128 +1,138 @@
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>DOM Manuplation Projects</title>
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Jekyll v4.0.1">
+      <title>DOM Manuplation Projects</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+      <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#563d7c">
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
         }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+      <!-- Custom styles for this template -->
+      <link href="jumbotron.css" rel="stylesheet">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<main role="main">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">DOM Manipulation Simple Projects</h1>
+        <p>This is a Page that contains simple projects that demonstrate the Manipulation of the DOM(Document Object Model) with Javascript</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
     <div class="container">
-      <h1 class="display-3">DOM Manipulation Simple Projects</h1>
-      <p>This is a Page that contains simple projects that demonstrate the Manipulation of the DOM(Document Object Model) with Javascript</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-    </div>
-  </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Task List Application</h2>
-        <p>This is  a simple application that helps user to managee tasks . </p>
-        <p>It has the following features...</p>
-         <p>1. Add New Tasks to Database </p>
-        <p>2. Remove Single Task form Database </p>
-          <p>3. Clear All Tasks 
-        </p>
-        <p><a class="btn btn-secondary" href="./Task List App/taskUI.html" role="button" target="_blanck">Go To App &raquo;</a></p>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Task List Application</h2>
+          <p>This is  a simple application that helps user to managee tasks . </p>
+          <p>It has the following features...</p>
+          <p>1. Add New Tasks to Database </p>
+          <p>2. Remove Single Task form Database </p>
+            <p>3. Clear All Tasks 
+          </p>
+          <p><a class="btn btn-secondary" href="./Task List App/taskUI.html" role="button" target="_blanck">Go To App &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Loan Calculator</h2>
+          <p>This is  a simple application that helps user to show case loan Anlysis. </p>
+          <p>It has the following features...</p>
+          <p>1. Calculate Loan Interest </p>
+          <p>2. Infrom User Loan Analysis </p>
+          <p>3. Enteract with User in a nice way </p>
+            
+          <p><a class="btn btn-secondary" href="./Loan  Calculater/index.html" role="button" target="_blanck">Go To App &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Number Guessing Game</h2>
+          <p>This is  a simple application that plays number guess </p>
+          <p>It has the following features...</p>
+          <p>1. Allow User to Guess a Number </p>
+          <p>2. Infrom User Results </p>
+          <p>3. Set the Wining value Randomly </p>
+            
+          <p><a class="btn btn-secondary" href="./Number Guess/index.html" role="button" target="_blanck">Go To App &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Book Catalog Application</h2>
+          <p>This is  a simple application that can be used to keep book infromation on help desk </p>
+          <p>It has the following features...</p>
+          <p>1. Allow User to Add and Remove Books </p>
+          <p>2. Support Both ES5 and ES6 OOP Features </p>
+          <p>3. Store values in Databse  </p>
+            
+          <p><a class="btn btn-secondary" href="./Library Catalog/index.html" role="button" target="_blanck">Go To App &raquo;</a></p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2>Loan Calculator</h2>
-        <p>This is  a simple application that helps user to show case loan Anlysis. </p>
-        <p>It has the following features...</p>
-         <p>1. Calculate Loan Interest </p>
-         <p>2. Infrom User Loan Analysis </p>
-         <p>3. Enteract with User in a nice way </p>
-          
-        <p><a class="btn btn-secondary" href="./Loan  Calculater/index.html" role="button" target="_blanck">Go To App &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Number Guessing Game</h2>
-        <p>This is  a simple application that plays number guess </p>
-        <p>It has the following features...</p>
-         <p>1. Allow User to Guess a Number </p>
-         <p>2. Infrom User Results </p>
-         <p>3. Set the Wining value Randomly </p>
-          
-        <p><a class="btn btn-secondary" href="./Number Guess/index.html" role="button" target="_blanck">Go To App &raquo;</a></p>
-      </div>
-    </div>
 
-    <hr>
+      <hr>
 
-  </div> <!-- /container -->
+    </div> <!-- /container -->
 
-</main>
+  </main>
 
-<footer class="container">
-  <p>&copy; Company 2017-2020</p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script></body>
-</html>
+  <footer class="container">
+    <p>&copy; Company 2017-2020</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script></body>
+  </html>
