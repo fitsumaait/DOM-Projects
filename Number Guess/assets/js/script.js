@@ -12,3 +12,22 @@ const msg = document.querySelector('.msg');
 // Assigning the values of Numbers 
 minNumber.textContent = min;
 maxNumber.textContent = max;
+
+// Even Listen in btn 
+guessBtn.addEventListener('click',gussNumber);
+
+// Defining the function 
+function gussNumber()
+{
+    let val = parseInt(guessInput.value);
+    
+    if(isNaN(val) || val < min || val > max)
+    {
+        msg.textContent = `Enter a Number B/n ${min} and ${max}`;
+    }
+    else
+    {
+        alert('It is Ok');
+    }
+   
+}
