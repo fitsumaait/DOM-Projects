@@ -12,10 +12,25 @@ function UI() {}
 
 UI.prototype.addBookToList = function(book)
 {
-    
-    // console.log(book);
-}
 
+   const bookList = document.querySelector('#bookList');
+//    create elemet on the table 
+const singleRow = document.createElement('tr');
+singleRow.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.isbn}</td>
+          <td><a href="#" calss='delete'>x</a></td>
+    `;
+
+bookList.appendChild(singleRow);
+// console.log(singleRow);
+
+}
+UI.prototype.clearAll = function()
+{
+
+}
 // Even Listeners 
 document.querySelector('#book').addEventListener('submit', addBook);
 
@@ -32,8 +47,7 @@ const book = new Book(bTitle,bAuthor,bIsbn);
 // Pass to UI 
 const ui = new UI();
 ui.addBookToList(book);
-
-
+ui.clearAll();
 
 // console.log(book);
 
