@@ -1,5 +1,5 @@
 // Variables ...
-
+const twwitList = document.querySelector('#tweet-list');
 
 
 
@@ -16,6 +16,15 @@ function loadEvents()
 // add twitts 
 function addTwitt(e)
 {
-    console.log('Form Submited ...');
+    // console.log('Form Submited ...');
+    // Get the value 
+    const twwit = document.querySelector('#tweet').value;
+    
+    // create li
+    const li = document.createElement('li');
+    li.textContent = twwit; 
+    twwitList.appendChild(li);
+    
+    
     e.preventDefault();
 }
