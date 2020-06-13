@@ -49,7 +49,7 @@ UI.prototype.showMessage = function(msg,type)
 //   set Timer for the alert to disapear 
     setTimeout(function(){
         document.querySelector('.alert').remove();
-         },2000);
+         },1000);
 
 }
 // delete books 
@@ -102,7 +102,11 @@ function deletBook(e)
 {
 // Pass to UI 
 const ui = new UI();
-ui.deletSingleBook(e.target);
-ui.showMessage('Book Removed!!','success');
-e.preventDefault();
+if(e.target.className === 'delete')
+{
+    ui.deletSingleBook(e.target);
+    ui.showMessage('Book Removed!!','success');
+    e.preventDefault();
+}
+
 }
