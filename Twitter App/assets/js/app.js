@@ -122,5 +122,13 @@ function removeFromStorage(target)
 
      let singleTwiit = target.substring(0,target.length-1);
      
-    console.log(singleTwiit);
+     twitts.forEach(function(tw,index)
+     {
+       if(singleTwiit === tw)
+       {
+          twitts.splice(index,1);
+       }
+     });
+     localStorage.setItem('tweets',JSON.stringify(twitts));
+    // console.log(singleTwiit);
 }
