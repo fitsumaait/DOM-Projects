@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+    <title>Book Catalog</title>
+</head>
+<body>
+  
+<div class="container">
+  <h1>Add New Book</h1>
+  <form action="" id="book">
+   <div>
+       <label for="title">Book Title</label>
+       <input type="text"  id="title" class="u-full-width">
+   </div>
+   <div>
+    <label for="author">Book Author</label>
+    <input type="text"  id="author" class="u-full-width">
+</div>
+<div>
+    <label for="isbn">Book ISBN</label>
+    <input type="number"  id="isbn" class="u-full-width">
+</div>
+  </form>
+  <hr>
+  <table class="u-full-width">
+      <thead>
+          <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody id="bookList"></tbody>
+  </table>
+
+
+</div>
+
+
+
+<script src="./assets/js/es5_Script.js"></script>
+</body>
+</html>
