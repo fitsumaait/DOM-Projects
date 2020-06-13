@@ -25,9 +25,12 @@ function gussNumber()
     {
         msg.textContent = `Enter a Number B/n ${min} and ${max}`;
     }
-    else
+    if(val === winNumber)
     {
-        alert('It is Ok');
+        guessInput.disabled = true;
+        guessInput.style.borderColor = 'green';
+        msg.style.color = 'green';
+        msg.textContent = `You Won the Game...`;
     }
    
 }
