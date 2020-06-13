@@ -15,6 +15,14 @@ document.querySelector('#book').addEventListener('submit', addBook);
 
 function addBook(e)
 {
- console.log('Book Added ...');
+// Getting the UI values 
+const bTitle = document.querySelector('#title').value; 
+const bAuthor = document.querySelector('#author').value; 
+const bIsbn = document.querySelector('#isbn').value; 
+
+console.log(bTitle);
+console.log(bAuthor);
+console.log(bIsbn);
+
 e.preventDefault();
 }
