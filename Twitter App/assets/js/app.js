@@ -53,6 +53,8 @@ function removeTwitt(e)
        e.target.parentElement.remove();
      }
 
+     removeFromStorage(e.target.parentElement.textContent);
+
 
 }
 
@@ -103,4 +105,22 @@ function loadTwitts()
     twwitList.appendChild(li);
         }
      );
+}
+
+function removeFromStorage(target)
+{
+    let twitts;
+    if(localStorage.getItem('tweets')===null)
+    {
+        twitts = [];
+    }
+    else
+    {
+       twitts = JSON.parse(localStorage.getItem('tweets'));
+    
+     }
+
+     let singleTwiit = target.substring(0,target.length-1);
+     
+    console.log(singleTwiit);
 }
