@@ -10,6 +10,12 @@ function Book(title, author, isbn)
 // UI
 function UI() {}
 
+UI.prototype.addBookToList = function(book)
+{
+    
+    // console.log(book);
+}
+
 // Even Listeners 
 document.querySelector('#book').addEventListener('submit', addBook);
 
@@ -20,9 +26,16 @@ const bTitle = document.querySelector('#title').value;
 const bAuthor = document.querySelector('#author').value; 
 const bIsbn = document.querySelector('#isbn').value; 
 
-console.log(bTitle);
-console.log(bAuthor);
-console.log(bIsbn);
+// Create a Book 
+const book = new Book(bTitle,bAuthor,bIsbn);
+
+// Pass to UI 
+const ui = new UI();
+ui.addBookToList(book);
+
+
+
+// console.log(book);
 
 e.preventDefault();
 }
