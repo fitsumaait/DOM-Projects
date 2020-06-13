@@ -29,7 +29,9 @@ bookList.appendChild(singleRow);
 }
 UI.prototype.clearAll = function()
 {
-
+    document.querySelector('#title').value = ''; 
+    document.querySelector('#author').value = ''; 
+    document.querySelector('#isbn').value = ''; 
 }
 // Even Listeners 
 document.querySelector('#book').addEventListener('submit', addBook);
