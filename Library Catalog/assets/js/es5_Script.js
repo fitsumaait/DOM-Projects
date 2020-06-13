@@ -20,7 +20,7 @@ singleRow.innerHTML = `
           <td>${book.title}</td>
           <td>${book.author}</td>
           <td>${book.isbn}</td>
-          <td><a href="#" calss='delete'>x</a></td>
+          <td><a href="#" class='delete'>x</a></td>
     `;
 
 bookList.appendChild(singleRow);
@@ -50,6 +50,16 @@ UI.prototype.showMessage = function(msg,type)
     setTimeout(function(){
         document.querySelector('.alert').remove();
          },3000);
+
+}
+// delete books 
+UI.prototype.deletSingleBook = function(target)
+{
+  
+    if(target.className === 'delete')
+    {
+      target.parentElement.parentElement.remove();
+    }
 
 }
 // Even Listeners 
@@ -82,5 +92,17 @@ else
 
 // console.log(book);
 
+e.preventDefault();
+}
+
+// Adding delete 
+document.querySelector('#bookList').addEventListener('click', deletBook);
+
+function deletBook(e)
+{
+// Pass to UI 
+const ui = new UI();
+ui.deletSingleBook(e.target);
+ui.showMessage('Book Removed!!','success');
 e.preventDefault();
 }
