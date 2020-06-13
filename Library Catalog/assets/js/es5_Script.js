@@ -49,7 +49,7 @@ UI.prototype.showMessage = function(msg,type)
 //   set Timer for the alert to disapear 
     setTimeout(function(){
         document.querySelector('.alert').remove();
-         },3000);
+         },2000);
 
 }
 // delete books 
