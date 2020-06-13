@@ -33,6 +33,25 @@ UI.prototype.clearAll = function()
     document.querySelector('#author').value = ''; 
     document.querySelector('#isbn').value = ''; 
 }
+// Adding show Allert function to prototype
+UI.prototype.showMessage = function(msg,type)
+{
+    //UI Variables 
+    const container = document.querySelector('.container');
+    const form = document.querySelector('#book');
+//    Create the div 
+    const div = document.createElement('div');
+    div.className = `alert ${type}`;
+    div.appendChild(document.createTextNode(msg));
+
+    container.insertBefore(div,form);
+
+//   set Timer for the alert to disapear 
+    setTimeout(function(){
+        document.querySelector('.alert').remove();
+         },3000);
+
+}
 // Even Listeners 
 document.querySelector('#book').addEventListener('submit', addBook);
 
@@ -48,8 +67,18 @@ const book = new Book(bTitle,bAuthor,bIsbn);
 
 // Pass to UI 
 const ui = new UI();
-ui.addBookToList(book);
-ui.clearAll();
+// if the fields are empty 
+if(bTitle ===  '' || bAuthor === '' || bIsbn === '')
+{
+      ui.showMessage('All Fields are Required !!!','err');
+}
+else
+{
+    ui.addBookToList(book);
+     ui.showMessage('Book Added Successfully !!!','success');
+    ui.clearAll();
+}
+
 
 // console.log(book);
 
