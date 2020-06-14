@@ -98,6 +98,9 @@ function clearCart(e)
       shopingcart.removeChild(shopingcart.firstChild);    
   }
 
+//   clear from DB
+ clearFromDB();
+
 
 }
 
@@ -127,3 +130,38 @@ function addToDatabse(course)
     localStorage.setItem('courses',JSON.stringify(courses));
 }
 
+// Load from storage 
+function loadFromDB()
+{
+   let courseList = retriveFromDb();
+
+//    add to the chart 
+   courseList.forEach(element => {
+    // create tr 
+    const row = document.createElement('tr');
+
+    // Insert values 
+    row.innerHTML = `
+    <tr>   
+    <td>
+        <img src="${element.cImage}" width=100 />
+       </td>
+       <td>
+        ${element.cPrice}
+       </td>
+       <td>
+       <a href="#" class="remove" data-id="${element.cId}">X</a>
+      </td>
+      <tr>
+    `;
+    shopingcart.appendChild(row);
+   });
+
+}
+
+
+// clear from local storage 
+function clearFromDB()
+{
+    localStorage.clear();
+}
