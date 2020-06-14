@@ -8,29 +8,29 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
 
-    <title>Weekly Project APP</title>
+    <title>Weekly Budget App</title>
   </head>
   <body>
     <div class="container">
         <header>
-                <h1 class="text-center">My Weekly Budget APP</h1>
+                <h1 class="text-center">Weekly Budget APP</h1>
         </header>
         <section class="main-content">
             <div class="row">
                 <div class="col ">
                     <div class="content primary">
-                        <h2 class="text-center">Add your Expenses here...</h2>
+                        <h2 class="text-center">Add your Expenses for this Week</h2>
                             <form id="add-expense" action="#">
                                 <div class="form-group">
-                                    <label for="expense">Name:</label>
+                                    <label for="expense">Expense Item:</label>
                                     <input type="text" class="form-control" id="expense" placeholder="Eg. Transportation">
                                 </div>
                                 <div class="form-group">
-                                    <label for="amount">Amount:</label>
-                                    <input type="text" class="form-control" id="amount" placeholder="Eg. 20">
+                                    <label for="amount">Item Amount:</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="Eg. 20">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" class="btn btn-primary">Add New Expense</button>
                             </form>
                         
                     </div> <!--.content-->
@@ -46,10 +46,10 @@
                         </div>
                         <div id="budget" class="budget">
                             <div class="alert alert-primary">
-                                <p>Budget: $ <span id="total"></span> </p>
+                                <p>Initial Budget: $ <span id="total"></span> </p>
                             </div>
                             <div class="restante alert alert-success">
-                                <p>Left: $ <span id="left"></span></p>
+                                <p>Amount Left: $ <span id="left"></span></p>
                             </div>
                         </div> <!--.budget-->
                     </div> <!--.content-->
