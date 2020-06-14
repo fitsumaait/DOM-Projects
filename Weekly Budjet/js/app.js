@@ -9,13 +9,25 @@ constructor(budget)
 }
 
 }
+class HTMLUI
+{
 
+    // Insert Budget 
+    addBudget(amount)
+    {
+         bugTotal.innerHTML = `${amount}`;
+         bugLeft.innerHTML = `${amount}`;
+    }
+}
 
 
 
 
 // variabls 
 const addExpensForm = document.querySelector("#add-expense");
+const bugTotal = document.querySelector("span#total");
+const bugLeft = document.querySelector("span#left");
+const html = new HTMLUI();
 
 let budget , userBudget;
 
@@ -39,6 +51,8 @@ function loadEventListeners()
            else
            {
                budget = new Budget(userBudget);
+               html.addBudget(budget.budget);
+
            }
     });
 
