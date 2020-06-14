@@ -121,13 +121,20 @@ Insurance.prototype.calculateLevel = function(price, level) {
             document.querySelector('.error').remove();
         },1000);
     }
-    InsuranceUI.prototype.printResults = function(res)
+    InsuranceUI.prototype.printResults = function(res,ins)
     { 
         const result = document.querySelector('#result');
 
         const div = document.createElement('div');
 
-        div.innerHTML = `<p class="total">Total Price : ${res}`;
+       const val = ins.country === '1'? 'American' : (ins.country === '2'? 'Asia' : 'European');
+
+        div.innerHTML = `
+        <p class="header">Summary</p>
+        <p>Country : ${val} </p>
+        <p>Year : ${ins.year} </p>
+        <p>Level : ${ins.level} </p>
+        <p class="total">Total Price : ${res}</p>`;
 
         result.appendChild(div);
 
@@ -153,7 +160,7 @@ Insurance.prototype.calculateLevel = function(price, level) {
             const insurance = new Insurance(country, year, level);
             const price = insurance.calculatePrice(insurance);
             // console.log(price);
-            html.printResults(price);
+            html.printResults(price,insurance);
         }
 
     
