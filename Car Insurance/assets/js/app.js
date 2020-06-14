@@ -1,5 +1,5 @@
 // vars 
-
+const form = document.querySelector('#request-quote');
 
 
 // Event
@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const html = new InsuranceUI()
     html.displayYears();
 });
+
+form.addEventListener('submit', addQuote);
 
 
 
@@ -45,3 +47,22 @@ InsuranceUI.prototype.displayYears = function()
     }
 }
 
+// Functions 
+function addQuote(e)
+{
+    const country = document.querySelector('#make').value;
+    const year = document.querySelector('#year').value;
+    const level = document.querySelector('input[name="level"]:checked').value;
+
+    // If empty 
+    if(country=='')
+    {
+      alert('Fill Country');
+    }
+    else{
+        console.log(country,year,level);
+    }
+
+   
+    e.preventDefault();
+}
