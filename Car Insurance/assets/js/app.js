@@ -136,7 +136,16 @@ Insurance.prototype.calculateLevel = function(price, level) {
         <p>Level : ${ins.level} </p>
         <p class="total">Total Price : ${res}</p>`;
 
-        result.appendChild(div);
+        // loader imag
+        const loaderImg = document.querySelector('#loading img');
+        loaderImg.style.display = 'block';
+        setTimeout(function()
+        {
+            loaderImg.style.display = 'none';
+            result.appendChild(div);
+        },2000);
+
+        
 
 
 
@@ -157,6 +166,12 @@ Insurance.prototype.calculateLevel = function(price, level) {
         }
         else
         {
+            // clear previous 
+            const prev = document.querySelector('#result div');
+            if(prev)
+            {
+               prev.remove();
+            }
             const insurance = new Insurance(country, year, level);
             const price = insurance.calculatePrice(insurance);
             // console.log(price);
