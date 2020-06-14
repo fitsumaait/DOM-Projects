@@ -9,6 +9,7 @@ function loadEvenets()
 {
      courses.addEventListener('click', addCourse);
      shopingcart.addEventListener('click',removeCourse);
+     clearShopingcart.addEventListener('click',clearCart);
 
 }
 
@@ -67,6 +68,8 @@ function addToCart(courseInfo)
     `;
     shopingcart.appendChild(row);
 
+    addToDatabse(courseInfo);
+
 }
 
 // remove course 
@@ -79,6 +82,20 @@ function removeCourse(e)
        e.target.parentElement.parentElement.remove();
     }
 
+
+
+}
+
+// clear all cart 
+function clearCart(e)
+{
+//    Clear with html but not recomended 
+//   shopingcart.innerHTML = '';
+// with first child 
+  while(shopingcart.firstChild)
+  {
+      shopingcart.removeChild(shopingcart.firstChild);    
+  }
 
 
 }
