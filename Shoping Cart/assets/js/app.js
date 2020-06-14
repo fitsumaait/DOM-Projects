@@ -176,13 +176,13 @@ function removeCourseFromDB(id)
 {
   let coursesList = retriveFromDb();
 
-  console.log(coursesList);
-  coursesList.forEach(function(coursesList,i)
+
+  coursesList.forEach(function(c,i)
   {
-          if(coursesList.cId === id)
+          if(c.cId === id)
           {
-            // coursesList.splice(i,1);
+                coursesList.splice(i,1);
           }
   });
-//   localStorage.setItem('courses',JSON.stringify(coursesList));
+  localStorage.setItem('courses',JSON.stringify(coursesList));
 }
