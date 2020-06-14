@@ -10,6 +10,7 @@ function loadEvenets()
      courses.addEventListener('click', addCourse);
      shopingcart.addEventListener('click',removeCourse);
      clearShopingcart.addEventListener('click',clearCart);
+     document.addEventListener('DOMContentLoaded', loadFromDB);
 
 }
 
@@ -99,3 +100,30 @@ function clearCart(e)
 
 
 }
+
+// Databse Related fun // 
+// Retrive from storage 
+function retriveFromDb()
+{
+    let courses;
+    if(localStorage.getItem('courses')===null)
+    {
+          courses = [];
+    }
+    else{
+        courses = JSON.parse(localStorage.getItem('courses'));
+    }
+    return courses;
+}
+
+// add to storage 
+function addToDatabse(course)
+{
+    let courses =  retriveFromDb();
+
+    // add 
+    courses.push(course);
+
+    localStorage.setItem('courses',JSON.stringify(courses));
+}
+
