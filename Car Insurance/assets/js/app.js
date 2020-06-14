@@ -36,7 +36,7 @@ InsuranceUI.prototype.displayYears = function()
     // Generate the year 
     const sYears = document.querySelector('#year');
 
-    for (let i =min; i<=max; i++)
+    for (let i =max; i>=min; i--)
     {
         const opt = document.createElement('option');
         opt.value = i; 
