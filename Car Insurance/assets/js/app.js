@@ -121,6 +121,20 @@ Insurance.prototype.calculateLevel = function(price, level) {
             document.querySelector('.error').remove();
         },1000);
     }
+    InsuranceUI.prototype.printResults = function(res)
+    { 
+        const result = document.querySelector('#result');
+
+        const div = document.createElement('div');
+
+        div.innerHTML = `<p class="total">Total Price : ${res}`;
+
+        result.appendChild(div);
+
+
+
+
+    }
 
     // Functions 
     function addQuote(e)
@@ -138,7 +152,8 @@ Insurance.prototype.calculateLevel = function(price, level) {
         {
             const insurance = new Insurance(country, year, level);
             const price = insurance.calculatePrice(insurance);
-            console.log(price);
+            // console.log(price);
+            html.printResults(price);
         }
 
     
