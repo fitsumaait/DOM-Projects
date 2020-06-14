@@ -30,6 +30,22 @@ class HTMLUI
            document.querySelector('.alert').remove();
        },1000);
     }
+//   display expenst to ul
+    addExpensToList(name, amount)
+    {
+        const list = document.querySelector('#expenses ul');
+
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        
+        li.innerHTML = ` 
+          ${name}
+          <span class="badge badge-primary badge-pill">$ ${amount}</span>
+        `;
+
+        list.appendChild(li);
+
+    }
 }
 
 
@@ -77,6 +93,10 @@ function loadEventListeners()
      if(expenseName === '' || expenseAmount === '')
      {
         html.printMessage('All Fields are Require','alert-danger');
+     }
+     else
+     {
+         html.addExpensToList(expenseName,expenseAmount);
      }
      });
     
