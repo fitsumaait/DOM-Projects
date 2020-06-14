@@ -18,6 +18,18 @@ class HTMLUI
          bugTotal.innerHTML = `${amount}`;
          bugLeft.innerHTML = `${amount}`;
     }
+    printMessage(msg, className)
+    {
+       const messageWraper = document.createElement('div');
+       messageWraper.classList.add('text-center','alert',className);
+       messageWraper.appendChild(document.createTextNode(msg));
+
+       document.querySelector('.primary').insertBefore(messageWraper,addExpensForm);
+
+       setTimeout(function(){
+           document.querySelector('.alert').remove();
+       },1000);
+    }
 }
 
 
@@ -57,9 +69,16 @@ function loadEventListeners()
     });
 
   //   form 
-    addExpensForm.addEventListener('submit',function(e){
-
-    e.preventDefault();
+    addExpensForm.addEventListener('submit',function(e)
+    {
+        e.preventDefault();500
+     const expenseName =  document.querySelector('#expense').value;
+     const expenseAmount = document.querySelector('#amount').value;
+     if(expenseName === '' || expenseAmount === '')
+     {
+        html.printMessage('All Fields are Require','alert-danger');
+     }
      });
+    
 
 }
