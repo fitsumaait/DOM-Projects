@@ -33,6 +33,8 @@ class HTMLUI
 
        setTimeout(function(){
            document.querySelector('.alert').remove();
+           addExpensForm.reset();
+
        },1000);
     }
 //   display expenst to ul
@@ -115,7 +117,7 @@ function loadEventListeners()
   //   form 
     addExpensForm.addEventListener('submit',function(e)
     {
-        e.preventDefault();
+        e.preventDefault();4
      const expenseName =  document.querySelector('#expense').value;
      const expenseAmount = document.querySelector('#amount').value;
      if(expenseName === '' || expenseAmount === '')
