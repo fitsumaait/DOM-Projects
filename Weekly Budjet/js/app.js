@@ -7,6 +7,11 @@ constructor(budget)
      this.budget = Number(budget);
      this.buLeft = this.budget;
 }
+    
+   dedueBudget(amount)
+   {
+         return this.buLeft -=amount;
+   }
 
 }
 class HTMLUI
@@ -45,6 +50,29 @@ class HTMLUI
 
         list.appendChild(li);
 
+    }
+
+    // Tracker 
+    trackBudget(amount)
+    {
+         const budLeft = budget.dedueBudget(amount);
+         bugLeft.innerHTML = `${budLeft}`;
+
+         if((budget.budget/4) > budLeft)
+         {
+        //    add and remove class 
+          bugLeft.parentElement.parentElement.classList.remove('alert-success','alert-warning');
+          bugLeft.parentElement.parentElement.classList.add('alert-danger');
+         }
+         else if((budget.budget/2) > budLeft)
+         {
+        //    add class 
+           //    add and remove class 
+           bugLeft.parentElement.parentElement.classList.remove('alert-success');
+           bugLeft.parentElement.parentElement.classList.add('alert-warning');
+        
+         }
+        
     }
 }
 
@@ -97,6 +125,7 @@ function loadEventListeners()
      else
      {
          html.addExpensToList(expenseName,expenseAmount);
+         html.trackBudget(expenseAmount);
      }
      });
     
