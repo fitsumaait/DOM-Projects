@@ -115,7 +115,7 @@ function loadEventListeners()
   //   form 
     addExpensForm.addEventListener('submit',function(e)
     {
-        e.preventDefault();500
+        e.preventDefault();
      const expenseName =  document.querySelector('#expense').value;
      const expenseAmount = document.querySelector('#amount').value;
      if(expenseName === '' || expenseAmount === '')
@@ -126,6 +126,7 @@ function loadEventListeners()
      {
          html.addExpensToList(expenseName,expenseAmount);
          html.trackBudget(expenseAmount);
+         html.printMessage('Successfully Added','alert-success');
      }
      });
     
